@@ -7,10 +7,63 @@
     <link rel="icon" href="public/images/favicon.png" type="image/x-icon" />  
     <title>Happy Valentine's Day</title>
     <link rel="stylesheet" href="public/style.css">
+    <style>
+      /* ======= BUTTON CONTAINER ======= */
+      #buttonContainer {
+        display: none; /* hidden until animation reaches 3000 frames */
+        position: absolute;
+        left: 50%;
+        top: 65%;
+        transform: translateX(-50%);
+        gap: 20px;
+        z-index: 10;
+      }
+
+      /* ======= BUTTON STYLING ======= */
+      #buttonContainer button {
+        padding: 12px 28px;
+        font-size: 18px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        transition: transform 0.1s ease;
+      }
+
+      #yesButton {
+        background-color: #ff4d6d;
+        color: white;
+      }
+
+      #noButton {
+        background-color: #e0e0e0;
+      }
+
+      /* Make canvas fill the screen */
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      canvas#starfield {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+    </style>
   </head>
   <body>
     <canvas id="starfield"></canvas>
-    <button id="valentinesButton">Click Me! ❤</button>
+
+    <!-- ======= BUTTONS ======= -->
+    <div id="buttonContainer">
+      <button id="yesButton">Yes 💖</button>
+      <button id="noButton">No 🙃</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
