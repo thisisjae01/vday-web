@@ -1,0 +1,19 @@
+image: alpine:latest
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    # Create a folder for GitLab Pages to serve
+    - mkdir public_pages
+    # Copy your website files into that folder
+    - cp index.html public_pages/
+    - cp script.js public_pages/
+    - cp -r public public_pages/
+  artifacts:
+    paths:
+      - public_pages
+  only:
+    - main  # Deploy only from the main branch
