@@ -148,9 +148,9 @@ function drawText() {
     if(frameNumber > 2500){
         context.fillStyle = `rgba(45, 45, 255, ${opacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I love you so much {name}, more than", "all the time and space in the universe can contain"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["I like you Nat, more than", "all the time and space in the universe can contain"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
         } else {
-            context.fillText("I love you so much {name}, more than all the time and space in the universe can contain", canvas.width/2, canvas.height/2);
+            context.fillText("I like you Nat, more than all the time and space in the universe can contain", canvas.width/2, canvas.height/2);
         }
         opacity += 0.01;
     }
@@ -165,7 +165,7 @@ function drawText() {
     }
     if(frameNumber >= 3000){
         context.fillStyle = `rgba(45, 45, 255, ${thirdOpacity})`;
-        context.fillText("Happy Valentine's Day <3", canvas.width/2, (canvas.height/2 + 120));
+        context.fillText("Will you be my Valentine on 14 Feb?", canvas.width/2, (canvas.height/2 + 120));
         thirdOpacity += 0.01;
 
         // show the new buttons
